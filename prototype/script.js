@@ -4,24 +4,24 @@ let AString, BString;
 
 
 
-// Métier
+// Job
 function Calculate(A,B,operation){
-    let _solution = undefined;
+    let solution = undefined;
     switch (operation) {
         case '+':
-            _solution = A + B;
+            solution = A + B;
             break;
         case '-':
-            _solution = A-B;
+            solution = A-B;
                 break;
         default:
             break;
     }
-    return _solution;
+    return solution;
 }
 
 
-// Présentation
+// Presentation
 function ClickNumber(number){
     if(A == undefined){
         if(AString == undefined) AString = '';
