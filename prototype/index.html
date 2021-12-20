@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculatrice</title>
+    <title>Prototype-1 calculatrice</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    <section>
-        <div class="container">
-            <div id="display"></div>
-            <div class="buttons">
-                <div class="buttons">+</div>
-                <div id="equal" class="buttons">=</div>
-                <div class="buttons">3</div>
-                <div class="buttons">2</div>
-                <div class="buttons">1</div>
-            </div>
-        </div>
-    </section>
-
-
-    <script src="script.js"></script>
-
-    
+    <input type="text" id="afficheur">
+    <button onclick="ClickNumber(1)">1</button>
+    <button onclick="ClickNumber(2)">2</button>
+    <button onclick="ClickNumber(3)">3</button>
+    <button onclick="Operation('+')">+</button>
+    <button onclick="Operation('-')">-</button>
+    <button onclick="Egale()">=</button>
+    <button onclick="Init()">C</button>
 </body>
 </html>
