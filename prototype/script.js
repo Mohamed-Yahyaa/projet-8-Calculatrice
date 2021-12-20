@@ -5,7 +5,7 @@ let AString, BString;
 
 
 // Métier
-function Calculer(A,B,operation){
+function Calculate(A,B,operation){
     let _solution = undefined;
     switch (operation) {
         case '+':
@@ -37,19 +37,19 @@ function ClickNumber(number){
 
 function Afficher(number){
 
-    let afficheur = document.getElementById("afficheur");
-    afficheur.value = "";
+    let display = document.getElementById("display");
+    display.value = "";
     
     if(A != undefined && B != undefined && operation != undefined){
 
-        afficheur.value = number;
+        display.value = number;
     }else{
         if(AString != undefined)
-        afficheur.value += AString 
+        display.value += AString 
         if(operation != undefined)
-            afficheur.value += operation     
+        display.value += operation     
         if(BString != undefined)
-            afficheur.value += BString 
+        display.value += BString 
 
         }
  
@@ -63,14 +63,14 @@ function Operation(operationParam){
         A = parseFloat(AString);
         Afficher();
     }else{
-        alert("Vous avez déjà choisi l'opération " + operation);
+        alert(" You have already chosen the operation  " + operation);
     }
 }
 
-function Egale(){
+function Equal(){
     A = parseFloat(AString);
     B = parseFloat(BString);
-    solution = Calculer(A,B,operation);
+    solution = Calculate(A,B,operation);
     Afficher(solution);
 }
 
@@ -80,7 +80,7 @@ function Init(){
     AString = undefined;
     BString = undefined;
     operation = undefined;
-    let afficheur = document.getElementById("afficheur");
+    let display = document.getElementById("display");
     
-    afficheur.value = "";
+    display.value = "";
 }
