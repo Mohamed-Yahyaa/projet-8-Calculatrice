@@ -11,13 +11,13 @@ class CalculatriceBLO {
     get a() {
       return this._a
     }
-    set b(value){
+    set a(value){
         this._a = value;
     }
-    get y() {
+    get b() {
         return this._b
     }
-    set y(value){
+    set b(value){
           this._b = value;
     }
  
