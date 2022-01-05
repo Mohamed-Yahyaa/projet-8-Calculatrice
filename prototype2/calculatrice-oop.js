@@ -2,23 +2,23 @@
 class CalculatriceBLO {
 
     // Private attributes
-    #_x;
-    #_y;
+    #_a;
+    #_b;
     #_solution;
     #_operation;
 
     // Setters and getters
-    get x() {
-      return this._x  
+    get a() {
+      return this._a
     }
-    set x(value){
-        this._x = value;
+    set b(value){
+        this._a = value;
     }
     get y() {
-        return this._y 
+        return this._b
     }
     set y(value){
-          this._y = value;
+          this._b = value;
     }
  
     get operation() {
@@ -39,10 +39,10 @@ class CalculatriceBLO {
         this._solution = undefined;
         switch (this._operation) {
             case '+':
-                this._solution = this._x + this._y;
+                this._solution = this._a + this._b;
                 break;
             case '-':
-                this. _solution = this._x- this._y;
+                this. _solution = this._a - this._b;
                     break;
             default:
                 break;
@@ -51,8 +51,8 @@ class CalculatriceBLO {
     }
 
     Init(){
-        this._x = undefined;
-        this._y = undefined;
+        this._a = undefined;
+        this._b = undefined;
         this._operation = undefined;
     }
 

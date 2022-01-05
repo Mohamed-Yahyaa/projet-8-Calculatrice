@@ -1,15 +1,15 @@
 // Présentation
-let aNumberString, bNumberString;
+let aString, bString;
 let calculatrice = new CalculatriceBLO();
 
 function OnClickNumber(number){
-    if(calculatrice.x == undefined){
-        if(aNumberString == undefined) aNumberString = '';
-        aNumberString += number;
+    if(calculatrice.a == undefined){
+        if(aString == undefined) aString = '';
+        aString += number;
     } 
     else {
-        if(yString == undefined) yString = '';
-        yString += number;
+        if(bString == undefined) bString = '';
+        bString += number;
     } 
     Afficher();
 }
@@ -19,16 +19,16 @@ function Afficher(number){
     let afficheur = document.getElementById("display");
     afficheur.value = "";
     
-    if(calculatrice.x != undefined && calculatrice.y != undefined && calculatrice.operation != undefined){
+    if(calculatrice.a != undefined && calculatrice.b != undefined && calculatrice.operation != undefined){
 
         afficheur.value = number;
     }else{
-        if(xString != undefined)
-        afficheur.value += xString 
+        if(aString != undefined)
+        afficheur.value += aString 
         if(calculatrice.operation != undefined)
             afficheur.value += calculatrice.operation     
-        if(yString != undefined)
-            afficheur.value += yString 
+        if(bString != undefined)
+            afficheur.value += bString 
 
         }
  
@@ -38,7 +38,7 @@ function Afficher(number){
 function OnClickOperation(operationParam){
     if(calculatrice.operation == undefined){
         calculatrice.operation = operationParam;
-        calculatrice.x = parseFloat(xString);
+        calculatrice.a = parseFloat(aString);
         Afficher();
     }else{
         alert("Vous avez déjà choisi l'opération " + calculatrice.operation);
@@ -46,16 +46,16 @@ function OnClickOperation(operationParam){
 }
 
 function Equal(){
-    calculatrice.x = parseFloat(xString);
-    calculatrice.y = parseFloat(yString);
+    calculatrice.a = parseFloat(aString);
+    calculatrice.b = parseFloat(bString);
     calculatrice.Calculer();
     Afficher(calculatrice.solution);
 }
 
 function Init(){
     calculatrice.Init();
-    xString = undefined;
-    yString = undefined;
+    aString = undefined;
+    bString = undefined;
     let afficheur = document.getElementById("display");
     afficheur.value = "";
 }
