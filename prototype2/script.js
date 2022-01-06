@@ -1,6 +1,6 @@
 // Présentation
 let aString, bString;
-let calculatrice = new CalculatriceBLO();
+let calculatrice = new CalculatricePoo();
 
 function OnClickNumber(number){
     if(calculatrice.a == undefined){

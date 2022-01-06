@@ -1,5 +1,5 @@
 // Métier
-class CalculatriceBLO {
+class CalculatricePoo {
 
     // Private attributes
     #_a;
