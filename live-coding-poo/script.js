@@ -18,7 +18,7 @@ function Afficher(number){
 
     let afficheur = document.getElementById("display");
     afficheur.value = "";
-
+    
     if(calculatrice.a != undefined && calculatrice.b != undefined && calculatrice.operation != undefined){
 
         afficheur.value = number;
@@ -26,13 +26,13 @@ function Afficher(number){
         if(aString != undefined)
         afficheur.value += aString 
         if(calculatrice.operation != undefined)
-            afficheur.value += calculatrice.operation
+            afficheur.value += calculatrice.operation     
         if(bString != undefined)
             afficheur.value += bString 
 
         }
  
-
+   
 }
 
 function OnClickOperation(operationParam){
