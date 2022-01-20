@@ -66,6 +66,8 @@ class CalculatricePoo {
         this.#_b = undefined;
         this.#_operation = undefined;
         this.#_solution = undefined;
+        let display = document.getElementById("display")
+        display.value = ""
     }
     
     
