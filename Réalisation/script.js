@@ -53,10 +53,11 @@ function Equal(){
 }
 
 function Init(){
+    calculatrice.init()
     aString = undefined;
     bString = undefined;
     operation = undefined
-    calculatrice = undefined
+ 
     let afficheur = document.getElementById("display");
     afficheur.value = "";
 }
