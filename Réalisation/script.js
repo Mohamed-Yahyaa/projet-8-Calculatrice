@@ -1,63 +1,92 @@
-// Présentation
-let aString, bString;
-let calculatrice = new CalculatricePoo();
+// Variables
+let A,B,solution,operation;
+let AString, BString;
 
-function OnClickNumber(number){
-    if(calculatrice.a == undefined){
-        if(aString == undefined) aString = '';
-        aString += number;
+
+
+// Job
+function Calculate(A,B,operation){
+    let solution = undefined;
+    switch (operation) {
+        case '+':
+            solution = A + B;
+            break;
+        case '-':
+            solution = A - B;
+                break;
+                case '*':
+            solution = A * B;
+                break;
+                case '/':
+            solution = A / B;
+                break;
+        default:
+            break;
+    }
+    return solution;
+}
+
+
+// Presentation
+function CliquezNuméro(number){
+    if(A == undefined){
+        if(AString == undefined) AString = '';
+        AString += number;
     } 
     else {
-        if(bString == undefined) bString = '';
-        bString += number;
+        if(BString == undefined) BString = '';
+        BString += number;
     } 
+
     Afficher();
 }
 
 function Afficher(number){
 
-    let afficheur = document.getElementById("display");
-    afficheur.value = "";
+    let display = document.getElementById("display");
+    display.value = "";
     
-    if(calculatrice.a != undefined && calculatrice.b != undefined && calculatrice.operation != undefined){
+    if(A != undefined && B != undefined && operation != undefined){
 
-        afficheur.value = number;
+        display.value = number;
     }else{
-        if(aString != undefined)
-        afficheur.value += aString 
-        if(calculatrice.operation != undefined)
-            afficheur.value += calculatrice.operation     
-        if(bString != undefined)
-            afficheur.value += bString 
+        if(AString != undefined)
+        display.value += AString 
+        if(operation != undefined)
+        display.value += operation     
+        if(BString != undefined)
+        display.value += BString 
 
         }
  
    
 }
 
-function OnClickOperation(operationParam){
-    if(calculatrice.operation == undefined){
-        calculatrice.operation = operationParam;
-        calculatrice.a = parseFloat(aString);
+
+function Operation(operationParam){
+    if(operation == undefined){
+        operation = operationParam;
+        A = parseFloat(AString);
         Afficher();
     }else{
-        alert("Vous avez déjà choisi l'opération " + calculatrice.operation);
+        alert(" You have already chosen the operation  " + operation);
     }
 }
 
 function Equal(){
-    calculatrice.a = parseFloat(aString);
-    calculatrice.b = parseFloat(bString);
-    calculatrice.Calculer();
-    Afficher(calculatrice.solution);
+    A = parseFloat(AString);
+    B = parseFloat(BString);
+    solution = Calculate(A,B,operation);
+    Afficher(solution);
 }
 
 function Init(){
-    calculatrice.init()
-    aString = undefined;
-    bString = undefined;
-    operation = undefined
- 
-    let afficheur = document.getElementById("display");
-    afficheur.value = "";
+    A = undefined;
+    B = undefined;
+    AString = undefined;
+    BString = undefined;
+    operation = undefined;
+    let display = document.getElementById("display");
+    
+    display.value = "";
 }
