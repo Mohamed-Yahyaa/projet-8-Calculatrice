@@ -20,13 +20,15 @@ button{
     padding-bottom: 10px;
     margin-top: 12px;
     margin-right: 5px;
+    width: 67px;
+    text-align: center;
 }
 
 .container{
     border: 5px solid black;
     margin-left: 601px;
     margin-right: 601px;
-    width: 185px;
+    width: 300px;
     margin-top: 150px;
 
 
@@ -37,6 +39,6 @@ button{
     line-height: 70px;
     padding: 16px 8px;
     font-size: 25px;
-    width: 165px;
+    width: 280px;
 
 }
